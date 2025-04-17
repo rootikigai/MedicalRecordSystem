@@ -1,0 +1,8 @@
+countNegative = countNegative + 1;
+			countNegative += 1;
+			countNegative ++;
+			}
+			else if(firstNumber == 0){
+			countZero += 1;
+			}
+			else{countPositive += 1;}
