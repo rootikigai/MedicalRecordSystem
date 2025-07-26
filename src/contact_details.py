@@ -1,10 +1,11 @@
 import re
+from MedicalRecordSystem.src.address import *
 
 class InvalidEmailException(Exception): pass
 class InvalidPhoneException(Exception): pass
 
 class ContactDetails:
-    def __init__(self, name: str, email: str, phone_number: str, address):
+    def __init__(self, name: str, email: str, phone_number: str, address: Address):
         if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
             raise InvalidEmailException("Invalid email format")
 
@@ -33,7 +34,7 @@ class ContactDetails:
             "name": self.name,
             "email": self.email,
             "phone_number": self.phone_number,
-            "address": self.address
+            "address": self.address.get_info()
         }
 
     def __str__(self):
