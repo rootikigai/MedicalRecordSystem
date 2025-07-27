@@ -30,7 +30,7 @@ class TestContactDetails(unittest.TestCase):
         with self.assertRaises(InvalidEmailException):
             ContactDetails(
                 name="James",
-                email="james#yahoo.com",  # Invalid
+                email="james#yahoo.com",
                 phone_number="+23446591103",
                 address=self.address
             )
@@ -40,7 +40,7 @@ class TestContactDetails(unittest.TestCase):
             ContactDetails(
                 name="IKIGAI",
                 email="IKIGAI@yahoo.com",
-                phone_number="123-abc-7890",  # Invalid
+                phone_number="123-abc-7890",
                 address=self.address
             )
 
