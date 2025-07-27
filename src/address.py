@@ -1,12 +1,12 @@
 class Address:
     def __init__(self, house_number, street, lga, state):
-        if not house_number:
+        if not house_number or not house_number.strip():
             raise ValueError("Your house number is required")
-        if not street:
+        if not street or not street.strip():
             raise ValueError("Your street is required")
-        if not lga:
+        if not lga or not lga.strip():
             raise ValueError("Your lga is required")
-        if not state:
+        if not state or not state.strip():
             raise ValueError("Your state is required")
 
         self._house_number = house_number
