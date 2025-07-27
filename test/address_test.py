@@ -4,18 +4,19 @@ from address import Address
 
 
 class AddressTest(unittest.TestCase):
+    def setUp(self):
+        self.house_number = "312"
+        self.street = "Herbert Macaulay Road"
+        self.lga = "Yaba"
+        self.state = "Lagos"
+
     def test_address_can_be_created(self):
-        house_number = "312"
-        street = "Herbert Macauley Road"
-        lga = "Yaba"
-        state = "Lagos"
+        address = Address(self.house_number, self.street, self.lga, self.state)
 
-        address = Address(house_number, street, lga, state)
-
-        self.assertEqual(address.get_house_number(), house_number)
-        self.assertEqual(address.get_street(), street)
-        self.assertEqual(address.get_lga(), lga)
-        self.assertEqual(address.get_state(), state)
+        self.assertEqual(address.get_house_number(), self.house_number)
+        self.assertEqual(address.get_street(), self.street)
+        self.assertEqual(address.get_lga(), self.lga)
+        self.assertEqual(address.get_state(), self.state)
 
 
 
