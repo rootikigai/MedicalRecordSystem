@@ -18,6 +18,16 @@ class AddressTest(unittest.TestCase):
         self.assertEqual(address.get_lga(), self.lga)
         self.assertEqual(address.get_state(), self.state)
 
+    def test_that_address_with_empty_fields_raises_error(self):
+        with self.assertRaises(ValueError):
+            Address("", self.street, self.lga, self.state)
+        with self.assertRaises(ValueError):
+            Address(self.house_number, "", self.lga, self.state)
+        with self.assertRaises(ValueError):
+            Address(self.house_number, self.street, "", self.state)
+        with self.assertRaises(ValueError):
+            Address(self.house_number, self.street, self.lga, "")
+
 
 
 if __name__ == '__main__':
