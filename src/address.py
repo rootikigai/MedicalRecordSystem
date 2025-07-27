@@ -1,5 +1,14 @@
-class Address(object):
+class Address:
     def __init__(self, house_number, street, lga, state):
+        if not house_number:
+            raise ValueError("Your house number is required")
+        if not street:
+            raise ValueError("Your street is required")
+        if not lga:
+            raise ValueError("Your lga is required")
+        if not state:
+            raise ValueError("Your state is required")
+
         self._house_number = house_number
         self._street = street
         self._lga = lga
