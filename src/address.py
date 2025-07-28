@@ -34,4 +34,3 @@ class Address:
 
     def get_full_address(self):
         return f"{self._house_number}{self._street}{self._lga}{self._state}"
-        pass
