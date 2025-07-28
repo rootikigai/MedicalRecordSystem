@@ -25,17 +25,7 @@ class MedicalHistory:
 
 
         self._medical_conditions.append(condition)
-        # is_valid_word = re.match(r"^[a-z\sA-Z]+ - (?:19|20)\d\d", condition)
-        # is_valid_year = re.findall("(?:19|20)\d\d", condition)
-
-        # is_valid_format = re.match(r"^[a-zA-Z\s]+(-(?:19|20)\d\d)?", condition)
-        # is_valid_year = re.findall("(?:19\d\d|20(?:0\d|1\d|2[0-5]))$", condition)
-        # if not is_valid_format:
-        #     raise ValueError("Invalid! Use the format: medical condition-yyyy(optional)")
-        # if not is_valid_year:
-        #     raise ValueError("Only enter a year between 1900 and 2025")
-
-
+        
 
     def get_medications(self) -> list:
         return self._medications
