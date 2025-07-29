@@ -46,14 +46,17 @@ class MedicalHistory:
             raise ValueError("Invalid! Use format: medication or medication - YYYY (1900–2025)")
         self._medications.append(medication)
 
+    def get_allergies(self) -> list:
+        return self._allergies
+
     def add_allergy(self, allergy) -> None:
         pattern = r"^[a-zA-Z\s]+$"
         if not re.match(pattern, allergy):
             raise ValueError("Allergies should contain only letters")
         self._allergies.append(allergy)
 
-    def get_allergies(self) -> list:
-        return self._allergies
+    def get_surgeries(self) -> list:
+        return self._surgeries
 
     def add_surgery(self, surgery) -> None:
         pattern = r"^[a-zA-Z\s]+$"
@@ -61,8 +64,8 @@ class MedicalHistory:
             raise ValueError("Allergies should contain only letters")
         self._surgeries.append(surgery)
 
-    def get_surgeries(self) -> list:
-        return self._surgeries
+    def get_family_history(self) -> dict:
+        return self._family_history
 
     def add_family_history(self, family_member, condition) -> None:
         if family_member not in self._family_history.keys():
@@ -73,9 +76,6 @@ class MedicalHistory:
         if not re.match(pattern, condition):
             raise ValueError("Invalid! Use format: condition or condition - YYYY (1900–2025)")
         self._family_history[family_member].append(condition)
-
-    def get_family_history(self) -> dict:
-        return self._family_history
 
     def get_last_visit_date(self) -> str:
         output = "%d/%m/%Y"
