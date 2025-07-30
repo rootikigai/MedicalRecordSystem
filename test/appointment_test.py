@@ -1,5 +1,7 @@
 import unittest
 
+from src.patient import Patient
+
 
 class AppointmentTest(unittest.TestCase):
     def setUp(self):
