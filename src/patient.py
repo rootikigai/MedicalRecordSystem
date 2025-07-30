@@ -1,7 +1,7 @@
 import re
 from datetime import datetime
-from MedicalRecordSystem.src.contact_details import *
-from MedicalRecordSystem.src.medical_history import *
+from src.contact_details import *
+from src.medical_history import *
 
 
 class InvalidGenderException(Exception): pass
