@@ -51,7 +51,7 @@ class AddressTest(unittest.TestCase):
         with self.assertRaises(TypeError):
             Address(self.test_house_number, self.test_street, self.test_lga, 123)
 
-    def test__that_get_full_address_returns_the_correct_string(self):
+    def test_that_get_full_address_returns_the_correct_string(self):
         expected = f"{self.test_house_number}{self.test_street}{self.test_lga}{self.test_state}"
         self.assertEqual(self.address.get_full_address(), expected)
 

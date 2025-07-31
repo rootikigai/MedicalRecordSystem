@@ -1,5 +1,5 @@
 import re
-from MedicalRecordSystem.src.address import *
+from src.address import *
 
 class InvalidEmailException(Exception): pass
 class InvalidPhoneException(Exception): pass
